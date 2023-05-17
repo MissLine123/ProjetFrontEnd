@@ -1,14 +1,15 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 
 
-function DeleteSpend() {
-    const params = useParams()
+function DeleteSpend(props) {
+
+
 
   return (
-    <div><form action={`http://localhost:5000/spend/delete/${params.id}?_method=DELETE`} method='post'>
-    <input type="hidden" name="mehod" value="delete" />
+    <div><form action={`http://localhost:5000/spend/delete/${props._id}?_method=DELETE`} method='post'>
+    <input type="hidden" name="method" value="delete" />
     
      <input type="submit" value="Supprimer la dépense"/> 
 

@@ -2,7 +2,9 @@ import React, { useEffect, useReducer } from "react"
 import axios from "axios"
 
 import Navbar from '../Navbar/Navbar'
-import Deletespend from '../DeleteSpend/DeleteSpend'
+import DeleteSpend from '../DeleteSpend/DeleteSpend'
+import EditSpend from "../EditSpend/EditSpend"
+import { Link } from "react-router-dom"
 
 function Allspend() {
     const initialState = {
@@ -53,8 +55,11 @@ function Allspend() {
                         <p>{spend.date}</p>
                         <p>{spend.montant}</p>
                         <p>{spend.remarque}</p>
+                        <p>{spend._id}</p>
+                           
+                           <Link to={`/spend/edit/${spend._id}`}>Editer</Link>
+                            <DeleteSpend _id={spend._id} />
                             <hr/>
-                            <Deletespend/>
                     </div>
                 )
             })}
