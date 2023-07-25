@@ -10,19 +10,28 @@ import NewUser from './components/NewUser/NewUser';
 import Navbar from './components/Navbar/Navbar';
 import NotFound from './components/Notfound/NotFound';
 import EditSpend from './components/EditSpend/EditSpend';
+import Portefeuille from './components/Portefeuille/Portefeuille';
+import NewCategorie from './components/NewCategorie/NewCategorie';
+import Categorie from './components/Portefeuille/Categorie/Categorie';
+
 
 
 function App() {
   return (
     <div className="App">
+    <Navbar/>
     <Routes> 
     <Route path='/' element={<Home/>} />
-    <Route path='/allspend' element={<Allspend/>}/>
+    <Route path='/portefeuille' element={<Portefeuille/>}/>
     <Route path='/newspend' element={<Newspend/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/newuser' element={<NewUser/>}/>
     <Route path='/spend/edit/:id' element={<EditSpend/>}/>
+    <Route path='/categorie' element={<Categorie/>}/>
+    <Route path='/allspend' element={<Allspend/>}/>
+    <Route path='/newcategorie' element={<NewCategorie/>}/>
     <Route path='/*' element={<NotFound/>}/>
+  
     
 
 

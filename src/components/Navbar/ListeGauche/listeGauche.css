@@ -1,0 +1,19 @@
+/* #listeGauche{
+display: flex;
+flex-direction: column;
+padding: 5% 5% 5%;
+
+} */
+#listeGauche {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+
+  }
+  
+ .list {
+    display: block;
+    color: brown;
+    padding:5%;
+  }

@@ -1,0 +1,14 @@
+/* #listeGauche{
+    position:relative;
+
+
+}
+#allspend{
+    position: absolute;
+    color: rgb(17, 255, 0);
+} */
+
+ #portefeuille{
+    
+    display: flex;
+}

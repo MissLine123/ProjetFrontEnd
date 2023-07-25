@@ -24,25 +24,54 @@ function EditSpend() {
             setError(error);
             setSpend();
         });
-    })
+    }, [])
+    const handleDateChange = (event) => {
+        // console.log(event.target.value);
+        setSpend (event.target.value);
+       
+    }
+    const handleMontantChange = (event) => {
+        // console.log(event.target.value);
+        setSpend (event.target.value);
+
+       
+    }
+    const handleRemarquesChange = (event) => {
+        // console.log(event.target.value);
+        setSpend (event.target.value);
+       
+    }
+    const handleCategorieChange = (event) => {
+        // console.log(event.target.value);
+        setSpend (event.target.value);
+       
+    }
+
+
 
   return (
-    <div><form action={`http://localhost:5000/spend/edit/${params._id}?_method=PUT`} method='post'>
+    <div>
+    <h1>{loading ? 'Loading...' : spend.date_depense}</h1> 
+    <p>  {loading ? 'Loading...' : spend.montant_depense}</p>
+       <p> {loading ? 'Loading...' : spend.remarque_depense}</p>
+       <p> {loading ? 'Loading...' : spend.categorie}</p>
+      
+       <form action={`http://localhost:5000/spend/edit/${params.id}?_method=PUT`} method='post'>
     <input type="hidden" name="method" value="put" />
     
     <label>
             date:
         </label>
-        <input type='date' name='date' />
+        <input type='date' name='date_depense' Value={spend.date_depense}   />
         <label>
             Montant:
         </label>
-        <input type='number' name='montant' />
+        <input type='number' name='montant_depense' Value={spend.montant_depense} min="1" />
         <label>
             Remarque
         </label>
-        <input type='text' name='remarque' />
-     
+        <input type='text' name='remarque_depense' Value={spend.remarque_depense} />
+       
        
 
      <input type="submit" value="Modifier la dépense"/> 

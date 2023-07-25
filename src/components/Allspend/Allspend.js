@@ -1,7 +1,8 @@
 import React, { useEffect, useReducer } from "react"
 import axios from "axios"
+import { Icon } from 'semantic-ui-react'
 
-import Navbar from '../Navbar/Navbar'
+
 import DeleteSpend from '../DeleteSpend/DeleteSpend'
 import EditSpend from "../EditSpend/EditSpend"
 import { Link } from "react-router-dom"
@@ -46,18 +47,19 @@ function Allspend() {
  })
   return (
     <div>
-    <Navbar/>
+ 
 
         <p>
             {state.loading ? 'Loading' : state.spend.map((spend,index)=>{
                 return(
                     <div key={index}>
-                        <p>{spend.date}</p>
-                        <p>{spend.montant}</p>
-                        <p>{spend.remarque}</p>
-                        <p>{spend._id}</p>
-                           
-                           <Link to={`/spend/edit/${spend._id}`}>Editer</Link>
+                        <p>date: {spend.date_depense}</p>
+                        <p>Catégorie: {spend.nom_categorie}</p>
+                        <p>Montant: {spend.montant_depense}</p>
+                        <p>Remarques: {spend.remarque_depense}</p>
+                        
+                        {/* <Icon name={spend.logoName} size='big' /> */}
+                        <button> <Link to={`/spend/edit/${spend._id}`}>Editer</Link></button>  
                             <DeleteSpend _id={spend._id} />
                             <hr/>
                     </div>

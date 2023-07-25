@@ -1,3 +1,16 @@
-.centrer{
-    padding: 0 5%;
+.link{
+    color: rgb(253, 253, 253);
+    text-decoration: none;
+    padding: 5%;
+    font-size: 21px;
+}
+/* .centrer :hover{
+    background-color: pink;
+    color: rgb(0, 0, 0)
+} */
+.topnav{
+    background-color: black;
+    padding: 2% ;
+    text-align: center;
+    overflow: hidden;
 }
