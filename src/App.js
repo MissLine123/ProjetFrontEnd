@@ -11,8 +11,13 @@ import Navbar from './components/Navbar/Navbar';
 import NotFound from './components/Notfound/NotFound';
 import EditSpend from './components/EditSpend/EditSpend';
 import Portefeuille from './components/Portefeuille/Portefeuille';
-import NewCategorie from './components/NewCategorie/NewCategorie';
+import NewCategorie from './components/Portefeuille/NewCategorie/NewCategorie';
 import Categorie from './components/Portefeuille/Categorie/Categorie';
+import Revenu from './components/Portefeuille/Revenu/Revenu';
+import Depenses from './components/Portefeuille/Depenses/Depenses';
+
+
+
 
 
 
@@ -25,12 +30,17 @@ function App() {
     <Route path='/portefeuille' element={<Portefeuille/>}/>
     <Route path='/newspend' element={<Newspend/>}/>
     <Route path='/login' element={<Login/>}/>
+
     <Route path='/newuser' element={<NewUser/>}/>
     <Route path='/spend/edit/:id' element={<EditSpend/>}/>
     <Route path='/categorie' element={<Categorie/>}/>
     <Route path='/allspend' element={<Allspend/>}/>
     <Route path='/newcategorie' element={<NewCategorie/>}/>
+    <Route path='/revenu' element={<Revenu/>}/>
+    <Route path='/depenses' element={<Depenses/>}/>
     <Route path='/*' element={<NotFound/>}/>
+
+
   
     
 

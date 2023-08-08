@@ -4,16 +4,35 @@ flex-direction: column;
 padding: 5% 5% 5%;
 
 } */
+
 #listeGauche {
+
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 200px;
+    background-color: #F7E1D7;
+  
 
   }
   
  .list {
     display: block;
-    color: brown;
+    color: #4A5759;
     padding:5%;
   }
+
+  /* Fleche */
+  .fleche{
+    border: solid #4A5759;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+   
+  }
+  
+  .droite{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  

@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Icon } from 'semantic-ui-react'
 import ListeGauche from '../Navbar/ListeGauche/ListeGauche'
 import 'C:/Users/Marie/Desktop/MyProjet/MyProjet/FrontEnd/savemoneyF/node_modules/bootstrap/dist/css/bootstrap.min.css';
-function Newspend1() {
+function Newspend() {
 
 
     const [logoName, setLogoName] = useState("")
@@ -84,12 +84,10 @@ function Newspend1() {
                     {state.loading ? 'Loading...' : state.categories.map((categorie, index) => {
                         return (
                             <div key={index} >
-                          <div> <p> {categorie.type_categorie ? <div><p>Catégorie de Dépenses:</p> <Icon name={categorie.logoName} size='big' onClick={handleLogoChange} /> <p>{categorie.nom_categorie}</p> </div> : "" }</p>
-                          <p> {categorie.type_categorie ? "" : <div><p>Catégorie de Dépenses:</p> <Icon name={categorie.logoName} size='big' onClick={handleLogoChange} /> <p>{categorie.nom_categorie}</p> </div> }</p>
-                          </div>
-                               
                           
-                            </div> )
+                                <p> {categorie.type_categorie ? <div><Icon name={categorie.logoName} size='big' onClick={handleLogoChange} /> <p>{categorie.nom_categorie}</p> </div> : ""}</p>
+                            </div>
+                        )
                     })}
                     <input type="hidden" name="logoName" value={logoName} />
                     <input type="hidden" name="nom_categorie" value={categorieName} />
@@ -101,6 +99,4 @@ function Newspend1() {
     )
 }
 
-
-
-export default Newspend1
+export default Newspend

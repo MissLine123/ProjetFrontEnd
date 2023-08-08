@@ -2,10 +2,10 @@ import React, { useEffect, useReducer } from "react"
 import axios from "axios"
 import { Icon } from 'semantic-ui-react'
 
-
 import DeleteSpend from '../DeleteSpend/DeleteSpend'
 import EditSpend from "../EditSpend/EditSpend"
 import { Link } from "react-router-dom"
+import 'C:/Users/Marie/Desktop/MyProjet/MyProjet/FrontEnd/savemoneyF/node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function Allspend() {
     const initialState = {
@@ -47,15 +47,15 @@ function Allspend() {
  })
   return (
     <div>
- 
-
-        <p>
+<div>
+      
             {state.loading ? 'Loading' : state.spend.map((spend,index)=>{
                 return(
                     <div key={index}>
                         <p>date: {spend.date_depense}</p>
                         <p>Catégorie: {spend.nom_categorie}</p>
                         <p>Montant: {spend.montant_depense}</p>
+                        <p>Type: {spend.type}</p>
                         <p>Remarques: {spend.remarque_depense}</p>
                         
                         {/* <Icon name={spend.logoName} size='big' /> */}
@@ -65,7 +65,7 @@ function Allspend() {
                     </div>
                 )
             })}
-        </p>
+       </div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import { Icon } from 'semantic-ui-react'
+import ListeGauche from '../../Navbar/ListeGauche/ListeGauche'
 
 class NewCategorie extends Component {
     state = {
@@ -17,7 +18,11 @@ class NewCategorie extends Component {
 
     render() {
         return (
+            <div class="portefeuille">
+            <div><ListeGauche/></div>
             <div>
+
+
                 <form action='http://localhost:5000/submit-categorie' method='post'>
                     <label>
                         Nom du catégorie
@@ -87,7 +92,7 @@ class NewCategorie extends Component {
                         <tr>
                             <td>  <Icon name='bar' size='big' onClick={this.handleLogoChange} /></td>
                             <td>   <Icon name='birthday' size='big' onClick={this.handleLogoChange} /></td>
-                            <td>   <Icon name='graduation' size='big' onClick={this.handleLogoChange} /></td>
+                            <td>   <Icon     name='graduation' size='big' onClick={this.handleLogoChange} /></td>
                             <td>   <Icon name='gbp' size='big' onClick={this.handleLogoChange} /></td>
                             <td>   <Icon name='idea' size='big' onClick={this.handleLogoChange} /></td>
                             <td>   <Icon name='gift' size='big' onClick={this.handleLogoChange} /></td>
@@ -95,7 +100,7 @@ class NewCategorie extends Component {
                     </table>
                     <input type="hidden" name="logoName" value={this.state.logoName} />
                     <input type='submit' value='Enregister la catégorie ' />
-                </form>
+                </form></div>
             </div>
         )
     }

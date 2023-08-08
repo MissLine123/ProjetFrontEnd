@@ -1,16 +1,27 @@
 .link{
-    color: rgb(253, 253, 253);
-    text-decoration: none;
-    padding: 5%;
-    font-size: 21px;
+    color: #4A5759;
+    font-size: 20px;
+    font-weight:bolder;
+    /* align-items: center; */
+    padding: 6%;
+
 }
-/* .centrer :hover{
-    background-color: pink;
-    color: rgb(0, 0, 0)
-} */
 .topnav{
-    background-color: black;
+    background-color: #DEDBD2;
     padding: 2% ;
     text-align: center;
     overflow: hidden;
+   
+}
+#accueil{
+    background-color: #B0C4B1;
+    padding: 5%;
+}
+.topnav a:hover{
+    background-color: rgb(123, 228, 26);
+    color: black;
+}
+.topnav>.active>link {
+    background-color: #C0C0C0;
+    color: rgb(188, 20, 20);
 }

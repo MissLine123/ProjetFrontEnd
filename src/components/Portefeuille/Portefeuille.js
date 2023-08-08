@@ -3,7 +3,7 @@ import './portefeuille.css'
 import ListeGauche from '../Navbar/ListeGauche/ListeGauche'
 import Allspend from '../Allspend/Allspend'
 function Portefeuille() {
-  return (<div id="portefeuille">
+  return (<div class="portefeuille">
 
 <div id="listeGauche">
 

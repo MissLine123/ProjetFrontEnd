@@ -1,14 +1,7 @@
-/* #listeGauche{
-    position:relative;
 
 
-}
-#allspend{
-    position: absolute;
-    color: rgb(17, 255, 0);
-} */
-
- #portefeuille{
+ .portefeuille{
     
     display: flex;
+    padding: 2% 5%;
 }
